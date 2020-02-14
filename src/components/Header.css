@@ -1,0 +1,11 @@
+.logo {
+    width: 15%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.topBackground {
+    background-color: white;
+    background-image: url(https://heathenbrewing.com/wp-content/uploads/2014/12/heathen-gray.jpg);
+}
