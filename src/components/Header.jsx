@@ -7,7 +7,7 @@ function Header(){
     <div>
     <div className='topBackground'>
       <img className='logo' src="https://heathenbrewing.com/wp-content/uploads/2017/10/heathen-tiki.png" alt="logo"/>
-      <Link to="/">Home</Link> | <Link to="/kegs">Kegs</Link> | <Link to="/newkeg">New Keg</Link> 
+      <Link to="/">Home</Link> | <Link to="/kegs">Kegs</Link> | <Link to="/newkeg">New Keg</Link> | <Link to="/signin">Sign In</Link> | <Link to="/signup">Sign Up</Link>
       <h1>TROY3OY BREWING - TROY3OY PUBLIC HOUSE</h1>
     </div>
     </div>
