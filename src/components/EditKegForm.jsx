@@ -41,7 +41,7 @@ function EditKegForm(){
           <input style = {inputStyles}
           id='beerLabel'
           placeholder='Image URL'/>
-        <button type='submit' class="btn btn-outline-danger">Update</button>
+        <br></br><button type='submit' class="btn btn-outline-danger">Update</button>
       </form>
     </div>
   );
