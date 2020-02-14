@@ -5,7 +5,7 @@ import './Header.css';
 function Header(){
   return (
     <div>
-      <Link to="/">Home</Link> | <Link to="/newticket">Create Ticket</Link>
+      <Link to="/">Home</Link> | <Link to="/kegs">Kegs</Link> | <Link to="/newkeg">New Keg</Link> 
       <h1>TroyBoy Brewing</h1>
     </div>
   );
