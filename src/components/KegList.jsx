@@ -54,9 +54,16 @@ var masterKegList =  [
 
 
 function KegList(){
-
+    var kegStyles = {
+        marginLeft: '4%',
+        marginRight: '4%',
+        marginTop: '20%',
+        marginBottom: '20%',
+        backgroundColor: 'white'
+      }
+      
   return (
-    <div>
+    <div style = {kegStyles}>
       {masterKegList.map((keg,index) =>
         <Keg name={keg.name}
           brand={keg.brand}
