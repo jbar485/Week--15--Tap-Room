@@ -57,13 +57,21 @@ function KegList(){
     var kegStyles = {
         marginLeft: '4%',
         marginRight: '4%',
-        marginTop: '20%',
-        marginBottom: '20%',
-        backgroundColor: 'white'
+        marginTop: '15%',
+        backgroundColor: 'white',
+        paddingTop: '1%'
       }
-      
+
+      var kegLogo = {
+        display: 'block',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginBottom: '2%'
+      }
+
   return (
     <div style = {kegStyles}>
+        <img style = {kegLogo} src="https://utfb-images.untappd.com/f4vvbxuNYWGcK53DeknH2vUv?auto=compress" alt="logo"/>
       {masterKegList.map((keg,index) =>
         <Keg name={keg.name}
           brand={keg.brand}
