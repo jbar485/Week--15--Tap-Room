@@ -1,5 +1,4 @@
 import React from 'react';
-import { findRenderedComponentWithType } from 'react-dom/test-utils';
 
 function NewKegForm(){
   var NewKegFormStyles = {
@@ -22,6 +21,7 @@ function NewKegForm(){
 
   return (
     <div style = {NewKegFormStyles}>
+        <h1> New Keg </h1>
       <form>
         <input style = {inputStyles}
           type='text'

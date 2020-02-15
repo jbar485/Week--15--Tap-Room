@@ -69,9 +69,17 @@ function KegList(){
         marginBottom: '2%'
       }
 
+      var kegHeader = {
+        borderBottom: "2px solid lightgray",
+        marginBottom: '5px',
+      }
+
   return (
     <div style = {kegStyles}>
+        <div style = {kegHeader}>
         <img style = {kegLogo} src="https://utfb-images.untappd.com/f4vvbxuNYWGcK53DeknH2vUv?auto=compress" alt="logo"/>
+        <p>(360) 111-1111</p>
+        </div>
       {masterKegList.map((keg,index) =>
         <Keg name={keg.name}
           brand={keg.brand}

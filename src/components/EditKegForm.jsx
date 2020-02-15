@@ -20,6 +20,7 @@ function EditKegForm(){
 
   return (
     <div style = {EditKegFormStyles}>
+        <h1> Edit Keg </h1>
       <form>
         <input style = {inputStyles}
           type='text'
