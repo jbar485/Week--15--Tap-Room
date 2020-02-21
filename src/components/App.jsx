@@ -18,7 +18,8 @@ class App extends React.Component {
       masterKegList: MasterKegList
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
-    this.handleIncresePint = this.handleIncresePint.bind(this);
+    this.handleIncreasePint = this.handleIncreasePint.bind(this);
+    this.handleDecreasePint = this.handleDecreasePint.bind(this);
   }
 
   handleAddingNewKegToList(newKeg){
@@ -27,7 +28,7 @@ class App extends React.Component {
     this.setState({masterKegList: newMasterKegList});
   }
 
-  handleIncresePint(id){
+  handleIncreasePint(id){
     let newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.forEach(function(keg){
       if (keg.id == id) {
@@ -37,13 +38,24 @@ class App extends React.Component {
     this.setState({masterKegList: newMasterKegList});
   }
 
+  handleDecreasePint(id){
+    let newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.forEach(function(keg){
+      if (keg.id == id) {
+        keg.pint -= 1;
+      }
+    });
+    this.setState({masterKegList: newMasterKegList});
+  }
+
+
   render(){
     return (
       <div className='general'>
         <Header/>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/kegs' render={()=><KegList kegList={this.state.masterKegList}/>} />
+          <Route path='/kegs' render={()=><KegList kegList={this.state.masterKegList} onIncreasePint={this.handleIncreasePint} onDecreasePint={this.handleDecreasePint}/>} />
           <Route path='/newkeg' render={()=><NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route path='/signin' component={SignIn} />
           <Route path='/signup' component={SignUp} />

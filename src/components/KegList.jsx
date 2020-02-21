@@ -31,7 +31,11 @@ function KegList(props){
         <p>(360) 111-1111</p>
         </div>
       {props.kegList.map((keg) =>
-        <Keg name={keg.name}
+        <Keg 
+          onIncreasePint={props.onIncreasePint}
+          onDecreasePint={props.onDecreasePint}
+          pint={keg.pint}
+          name={keg.name}
           brand={keg.brand}
           price={keg.price}
           alcoholContent={keg.alcoholContent}
