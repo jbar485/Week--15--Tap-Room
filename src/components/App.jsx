@@ -3,8 +3,6 @@ import Header from './Header';
 import KegList from './KegList';
 import { Switch, Route } from 'react-router-dom';
 import NewKegForm from './NewKegForm';
-import SignIn from './SignIn';
-import SignUp from './SignUp';
 import Home from './Home';
 import Error404 from './Error404';
 import MasterKegList from './MasterKegList';
@@ -60,8 +58,6 @@ class App extends React.Component {
           <Route exact path='/' component={Home} />
           <Route path='/kegs' render={()=><KegList kegList={this.state.masterKegList} onIncreasePint={this.handleIncreasePint} onDecreasePint={this.handleDecreasePint}/>} />
           <Route path='/newkeg' render={()=><NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
-          <Route path='/signin' component={SignIn} />
-          <Route path='/signup' component={SignUp} />
           <Route component={Error404}/>
         </Switch>
       </div>
