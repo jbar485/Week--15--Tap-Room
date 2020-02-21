@@ -44,28 +44,28 @@ function NewKegForm(props){
         <input style = {inputStyles}
           type='text'
           id='name'
-          placeholder='Keg Name'/>
+          placeholder='Keg Name'
           ref={(input) => {_name = input;}}/>
         <input style = {inputStyles}
           type='text'
           id='brand'
-          placeholder='Brand'/>
+          placeholder='Brand'
           ref={(input) => {_brand = input;}}/>
         <input style = {inputStyles}
           id='price'
-          placeholder='Price'/>
+          placeholder='Price'
           ref={(input) => {_price = input;}}/>
           <input style = {inputStyles}
           id='alcoholContent'
-          placeholder='ABV'/>
+          placeholder='ABV'
           ref={(input) => {_alcoholContent = input;}}/>
           <input style = {inputStyles}
           id='type'
-          placeholder='Type'/>
+          placeholder='Type'
           ref={(input) => {_type = input;}}/>
           <input style = {inputStyles}
           id='beerLabel'
-          placeholder='Image URL'/>
+          placeholder='Image URL'
           ref={(input) => {_beerLabel = input;}}/><br></br>
         <button type="submit" class="btn btn-outline-danger">Create</button>
       </form>
