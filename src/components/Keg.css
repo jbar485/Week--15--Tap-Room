@@ -1,3 +1,24 @@
 .pints {
-  float: inline-start;
+  margin-bottom: 20px;
+}
+.increase {
+
+}
+
+.number {
+  float: left;
+  margin-top: 5px;
+}
+
+.decrease {
+  float: left;
+}
+
+.price {
+  font-weight: 600;
+  font-size: small;
+}
+
+.aboutKeg {
+  font-size: small;
 }

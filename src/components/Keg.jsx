@@ -23,13 +23,13 @@ function Keg(props){
     <div>
       <div style = {kegStyles}>
         <img style = {kegImage} src={props.beerLabel} alt={props.name}></img>
-        <h3>{props.name}, <em>{props.type}</em></h3>
-        <p>{props.alcoholContent}% ~ {props.brand}</p>
-        <p>{props.price}</p>
+        <h5>{props.name}, <em>{props.type}</em></h5>
+        <p className='aboutKeg'>{props.alcoholContent}% <span>&#183;</span> {props.brand} <span>&#183;</span> Troy3oy Brewing <span>&#183;</span> Battlegroung, WA</p>
+        <p className='price'>16oz Can<span>&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;&#183;</span>{props.price}</p>
         <div className='pints'>
-        <button id="decrease" onClick={() => props.onDecreasePint(props.id)}  class="btn btn-outline-danger">-</button>
-          <p id="number">{props.pint}</p>
-          <button id="increase" onClick={() => props.onIncreasePint(props.id)} class="btn btn-outline-success">+</button>
+        <button onClick={() => props.onDecreasePint(props.id)}  className="btn btn-outline-danger decrease">-</button>
+          <p className="number">{props.pint}</p>
+          <button onClick={() => props.onIncreasePint(props.id)} className="btn btn-outline-success increase">+</button>
         </div>
       </div>
     </div>

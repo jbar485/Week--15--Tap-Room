@@ -24,11 +24,15 @@ function KegList(props){
         marginBottom: '5px',
       }
 
+      var address = {
+        marginLeft: '24%',
+      }
+
   return (
     <div style = {kegStyles}>
         <div style = {kegHeader}>
         <img style = {kegLogo} src="https://utfb-images.untappd.com/f4vvbxuNYWGcK53DeknH2vUv?auto=compress" alt="logo"/>
-        <p>(360) 111-1111</p>
+        <p>(360) 111-1111<span style = {address}>5612 NE 119th St Vancouver, Washington</span></p>
         </div>
       {props.kegList.map((keg) =>
         <Keg 
