@@ -18,12 +18,23 @@ class App extends React.Component {
       masterKegList: MasterKegList
     };
     this.handleAddingNewKegToList = this.handleAddingNewKegToList.bind(this);
+    this.handleIncresePint = this.handleIncresePint.bind(this);
   }
 
   handleAddingNewKegToList(newKeg){
-    let newMasterKegForm = this.state.masterKegList.slice();
-    newMasterKegForm.push(newKeg);
-    this.setState({masterKegList: newMasterKegForm});
+    let newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.push(newKeg);
+    this.setState({masterKegList: newMasterKegList});
+  }
+
+  handleIncresePint(id){
+    let newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.forEach(function(keg){
+      if (keg.id == id) {
+        keg.pint += 1;
+      }
+    });
+    this.setState({masterKegList: newMasterKegList});
   }
 
   render(){
