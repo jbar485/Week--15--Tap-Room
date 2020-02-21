@@ -93,6 +93,4 @@ function KegList(){
   );
 }
 
-// Login
-
 export default KegList;
