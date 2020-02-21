@@ -33,6 +33,9 @@ class App extends React.Component {
     newMasterKegList.forEach(function(keg){
       if (keg.id == id) {
         keg.pint += 1;
+        if (keg.pint >= 124) {
+          keg.splice(1);
+        }
       }
     });
     this.setState({masterKegList: newMasterKegList});
