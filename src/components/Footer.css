@@ -1,0 +1,11 @@
+.wrapper {
+  padding: 20px;
+  position: relative;
+  background-color: #151515;
+  margin-top: 8%;
+}
+
+.footerLogo {
+  width: 100px;
+  margin-left: 45%;
+}

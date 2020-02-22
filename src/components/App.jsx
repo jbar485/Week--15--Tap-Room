@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import Footer from './Footer';
 import KegList from './KegList';
 import { Switch, Route } from 'react-router-dom';
 import NewKegForm from './NewKegForm';
@@ -31,8 +32,8 @@ class App extends React.Component {
     newMasterKegList.forEach(function(keg){
       if (keg.id == id) {
         keg.pint += 1;
-        if (keg.pint >= 124) {
-          keg.splice(1);
+        if (keg.pint >= 125) {
+          keg.pint -= 1;
         }
       }
     });
@@ -44,6 +45,9 @@ class App extends React.Component {
     newMasterKegList.forEach(function(keg){
       if (keg.id == id) {
         keg.pint -= 1;
+        if (keg.pint <= -1) {
+          keg.pint += 1
+        }
       }
     });
     this.setState({masterKegList: newMasterKegList});
@@ -60,6 +64,7 @@ class App extends React.Component {
           <Route path='/newkeg' render={()=><NewKegForm onNewKegCreation={this.handleAddingNewKegToList} />} />
           <Route component={Error404}/>
         </Switch>
+        <Footer/>
       </div>
     );
   }

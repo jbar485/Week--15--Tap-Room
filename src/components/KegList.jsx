@@ -7,6 +7,7 @@ function KegList(props){
     var kegStyles = {
         marginLeft: '4%',
         marginRight: '4%',
+        paddingBottom: '1%',
         marginTop: '15%',
         backgroundColor: 'white',
         paddingTop: '1%'
